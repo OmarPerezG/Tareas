@@ -3,58 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablón de Tareas</title>
+    <title>Tu Aplicación</title>
+    <link rel="icon" href="GM.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="your-icon-path.ico" type="image/x-icon"> <!-- Reemplaza "your-icon-path.ico" con la ruta de tu icono -->
 </head>
 <body>
-
     <h1>Tablón de Tareas</h1>
 
-    <!-- Formulario para agregar tareas -->
-    <form id="task-form">
+    <form id="taskForm">
         <div>
-            <label for="task-name">Tarea:</label>
-            <input type="text" id="task-name" required>
+            <label for="taskName">Tarea:</label>
+            <input type="text" id="taskName" required>
         </div>
         <div>
-            <label for="task-assignee">Quién realiza:</label>
-            <input type="text" id="task-assignee" required>
+            <label for="taskAssignee">Quién realiza:</label>
+            <input type="text" id="taskAssignee" required>
         </div>
         <div>
-            <label for="task-creator">Quién puso:</label>
-            <input type="text" id="task-creator" required>
+            <label for="taskCreator">Quién puso:</label>
+            <input type="text" id="taskCreator" required>
         </div>
         <div>
-            <label for="task-priority">Prioridad:</label>
-            <select id="task-priority" required>
+            <label for="taskPriority">Prioridad:</label>
+            <select id="taskPriority" required>
                 <option value="bajo">Bajo</option>
                 <option value="medio">Medio</option>
                 <option value="alto">Alto</option>
             </select>
         </div>
         <div>
-            <label for="task-date">Fecha:</label>
-            <input type="date" id="task-date" required>
+            <label for="taskDate">Fecha:</label>
+            <input type="date" id="taskDate" required>
         </div>
         <div>
-            <label for="task-status">Estatus:</label>
-            <select id="task-status" required>
+            <label for="taskStatus">Estatus:</label>
+            <select id="taskStatus" required>
                 <option value="pendiente">Pendiente</option>
                 <option value="en proceso">En Proceso</option>
                 <option value="terminado">Terminado</option>
             </select>
         </div>
         <div>
-            <label for="task-comments">Comentarios:</label>
-            <textarea id="task-comments"></textarea>
+            <label for="taskComments">Comentarios:</label>
+            <textarea id="taskComments"></textarea>
         </div>
-        <button type="submit">Agregar Tarea</button>
+        <div>
+            <button type="submit">Agregar Tarea</button>
+        </div>
     </form>
 
-    <!-- Tabla de Tareas en Proceso -->
     <h2>Tareas en Proceso</h2>
-    <table id="task-table">
+    <table id="taskTable">
         <thead>
             <tr>
                 <th>Tarea</th>
@@ -62,19 +61,17 @@
                 <th>Quién puso</th>
                 <th>Prioridad</th>
                 <th>Fecha</th>
-                <th>Estatus</th>
                 <th>Comentarios</th>
-                <th>Acciones</th>
+                <th>Estatus</th>
             </tr>
         </thead>
-        <tbody id="task-body">
-            <!-- Las tareas se agregarán aquí dinámicamente -->
+        <tbody>
+            <!-- Tareas en proceso se agregarán aquí -->
         </tbody>
     </table>
 
-    <!-- Tabla de Tareas Terminadas -->
     <h2>Tareas Terminadas</h2>
-    <table id="completed-task-table">
+    <table id="completedTaskTable">
         <thead>
             <tr>
                 <th>Tarea</th>
@@ -82,13 +79,12 @@
                 <th>Quién puso</th>
                 <th>Prioridad</th>
                 <th>Fecha</th>
-                <th>Estatus</th>
                 <th>Comentarios</th>
-                <th>Acciones</th>
+                <th>Acción</th>
             </tr>
         </thead>
-        <tbody id="completed-task-body">
-            <!-- Las tareas completadas se agregarán aquí dinámicamente -->
+        <tbody>
+            <!-- Tareas terminadas se agregarán aquí -->
         </tbody>
     </table>
 
